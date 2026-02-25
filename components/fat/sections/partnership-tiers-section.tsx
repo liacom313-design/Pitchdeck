@@ -34,8 +34,8 @@ export function PartnershipTiersSection() {
           attribution="Charles Lu, Designer"
         />
 
-        <p className="reveal font-sans text-foreground text-lg md:text-xl mt-8">
-          <strong>Packages from $5,000</strong>
+        <p className="reveal font-sans text-foreground text-lg md:text-xl mt-8 leading-relaxed">
+          Fashion Art Toronto is pleased to offer bespoke partnership packages tailored to interested brands based on the opportunities outlined here. The minimum investment to be considered is $5,000.00, excluding in-kind sponsorships.
         </p>
       </div>
 

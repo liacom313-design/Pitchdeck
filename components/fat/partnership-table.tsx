@@ -28,7 +28,7 @@ interface PackageRow {
   tier: string
   price: string
   priceValue: number
-  category: "Main Event" | "Specialized"
+  category: "Main Event" | "Offsite Sponsorship" | "Specialized" | "In Kind"
   icon: React.ReactNode
   sections: TierSection[]
 }
@@ -488,6 +488,176 @@ const packageData: PackageRow[] = [
       },
     ],
   },
+  {
+    id: "in-kind-5k",
+    tier: "$5K IN-KIND SPONSOR",
+    price: "$5K",
+    priceValue: 5000,
+    category: "In Kind",
+    icon: <Shield className="size-4" />,
+    sections: [
+      {
+        heading: "BRAND VISIBILITY",
+        items: [
+          "Being featured during Toronto's largest and longest running Fashion Event.",
+          "2 stories (to be negotiated with the Social Media team).",
+          "Logo placement on our website, runway and social media.",
+        ],
+      },
+      {
+        heading: "DIRECT ACCESS & AUDIENCE",
+        items: [
+          "Your contribution experienced firsthand by our event staff, models, and talent.",
+          "Opportunities for networking and increased brand awareness.",
+        ],
+      },
+      {
+        heading: "CONTRIBUTION EXAMPLES",
+        items: [
+          "Transportation discounts",
+          "Food & Drinks for Staff/Models",
+          "Food & Drinks for VIP lounge",
+          "Product on the runway - front row goodie bags",
+          "Branded merch for staff /VIP/Frontrow",
+        ],
+      },
+    ],
+  },
+  {
+    id: "in-kind-10k",
+    tier: "$10K IN-KIND SPONSOR",
+    price: "$10K",
+    priceValue: 10000,
+    category: "In Kind",
+    icon: <Medal className="size-4" />,
+    sections: [
+      {
+        heading: "ONLINE PRESENCE:",
+        items: [
+          "Logo on the Fashion Art Toronto website.",
+          "Mentions with tagging during the event.",
+          "One branded collaborative post on Instagram and Tik Tok.",
+        ],
+      },
+      {
+        heading: "ONSITE PRESENCE:",
+        items: ["Logo on media projection screens in the runway room."],
+      },
+      {
+        heading: "ONSITE ACTIVATION (choose 1):",
+        items: [
+          "Integration in the runway show",
+          "Branded items (e.g., lanyards, glasses, T-shirts).",
+          "Branded fashion cocktail.",
+        ],
+      },
+      {
+        heading: "EVENT BENEFITS:",
+        items: ["4 VIP Passes", "6 GENERAL ADMISSION TICKETS"],
+      },
+    ],
+  },
+  {
+    id: "in-kind-20k-plus",
+    tier: "$20K+ IN-KIND SPONSOR",
+    price: "$20K+",
+    priceValue: 20000,
+    category: "In Kind",
+    icon: <Award className="size-4" />,
+    sections: [
+      {
+        heading: "ONLINE PRESENCE:",
+        items: [
+          "Prominent Logo on the Fashion Art Toronto website.",
+          "Mentions with tagging during the event.",
+          "Two branded collaborative posts on Instagram and Tik Tok.",
+        ],
+      },
+      {
+        heading: "ONSITE PRESENCE:",
+        items: [
+          "Logo on media projection screens in the runway room.",
+          "Logo on red carpet Step & Repeat media wall.",
+        ],
+      },
+      {
+        heading: "ONSITE ACTIVATION (choose 2):",
+        items: [
+          "Integration in the runway show",
+          "Branded items (e.g., lanyards, glasses, T-shirts).",
+          "Branded fashion cocktail.",
+          "Dedicated promotional space.",
+        ],
+      },
+      {
+        heading: "EVENT BENEFITS:",
+        items: ["8 VIP Passes", "12 General Admission Tickets"],
+      },
+    ],
+  },
+  {
+    id: "offsite-6-5k",
+    tier: "$6.5K OFFSITE PACKAGE",
+    price: "$6.5K",
+    priceValue: 6500,
+    category: "Offsite Sponsorship",
+    icon: <DoorOpen className="size-4" />,
+    sections: [
+      {
+        heading: "INCLUDED FEATURES",
+        items: [
+          "Location provision",
+          "Tables and chairs for the runway show",
+          "Staffing to support the runway presentation",
+        ],
+      },
+      {
+        heading: "NOTES",
+        items: ["Any other elements or customizations are additional"],
+      },
+    ],
+  },
+  {
+    id: "offsite-10k",
+    tier: "$10K EXTENDED OFFSITE PACKAGE",
+    price: "$10K",
+    priceValue: 10000,
+    category: "Offsite Sponsorship",
+    icon: <Sparkles className="size-4" />,
+    sections: [
+      {
+        heading: "ENHANCED PRODUCTION",
+        items: [
+          "Extended decor support",
+          "Additional equipment and staging options",
+          "Additional AV effects",
+        ],
+      },
+      {
+        heading: "PROMOTION",
+        items: [
+          "Additional promotion and amplification on the FAT page",
+        ],
+      },
+    ],
+  },
+  {
+    id: "offsite-25k",
+    tier: "$25K FULL SHOW PRODUCTION",
+    price: "$25K",
+    priceValue: 25000,
+    category: "Offsite Sponsorship",
+    icon: <Award className="size-4" />,
+    sections: [
+      {
+        heading: "WHITE GLOVE SERVICE",
+        items: [
+          "Full show production top to bottom",
+          "White-glove service to produce the exact event you want (within reason)",
+        ],
+      },
+    ],
+  },
 ]
 
 type SortColumn = "tier" | "price" | "category"
@@ -500,10 +670,16 @@ const defaultAllPackagesOrder: Record<string, number> = {
   "gold-sponsor": 3,
   "silver-sponsor": 4,
   "bronze-sponsor": 5,
-  "fashion-boutique-sponsor": 6,
-  "backstage-sponsor": 7,
-  "entrance-sponsor": 8,
-  "vip-lounge-sponsor": 9,
+  "offsite-6-5k": 6,
+  "offsite-10k": 7,
+  "offsite-25k": 8,
+  "fashion-boutique-sponsor": 9,
+  "backstage-sponsor": 10,
+  "entrance-sponsor": 11,
+  "vip-lounge-sponsor": 12,
+  "in-kind-5k": 13,
+  "in-kind-10k": 14,
+  "in-kind-20k-plus": 15,
 }
 
 function SortIcon({ column, sortColumn, sortDirection }: { column: SortColumn; sortColumn: SortColumn | null; sortDirection: SortDirection }) {
@@ -608,7 +784,7 @@ export function PartnershipTable() {
   const [sortColumn, setSortColumn] = useState<SortColumn | null>(null)
   const [sortDirection, setSortDirection] = useState<SortDirection>("desc")
   const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set())
-  const [filterCategory, setFilterCategory] = useState<"all" | "Main Event" | "Specialized">("all")
+  const [filterCategory, setFilterCategory] = useState<"all" | "Main Event" | "Offsite Sponsorship" | "Specialized" | "In Kind">("all")
 
   const handleSort = (column: SortColumn) => {
     if (sortColumn === column) {
@@ -670,7 +846,7 @@ export function PartnershipTable() {
     <div className="reveal flex flex-col gap-6">
       {/* Filter tabs */}
       <div className="flex gap-0 border border-border w-fit">
-        {["all", "Main Event", "Specialized"].map((cat) => (
+        {["all", "Main Event", "Offsite Sponsorship", "Specialized", "In Kind"].map((cat) => (
           <button
             key={cat}
             onClick={() => setFilterCategory(cat as typeof filterCategory)}
@@ -685,6 +861,9 @@ export function PartnershipTable() {
           </button>
         ))}
       </div>
+      <p className="font-sans text-xs md:text-sm text-muted-foreground">
+        Offsite Sponsorship packages are primarily designed for designers.
+      </p>
 
       {/* Table container with horizontal scroll on mobile */}
       <div className="border border-border overflow-x-auto">
