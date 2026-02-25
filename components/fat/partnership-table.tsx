@@ -50,9 +50,7 @@ const packageData: PackageRow[] = [
       "Press release inclusion",
     ],
     socialMedia: [
-      "6 branded Instagram posts",
-      "2 storytelling pieces",
-      "Full photo & video access",
+      "Tagging in event social media posts",
     ],
     onsiteActivation: [
       "40'×40' activation space",
@@ -80,8 +78,7 @@ const packageData: PackageRow[] = [
       "Logo on all marketing materials",
     ],
     socialMedia: [
-      "6 branded Instagram posts",
-      "Full photo & video access",
+      "Tagging in event social media posts",
     ],
     onsiteActivation: [
       "40'×40' activation space",
@@ -104,14 +101,20 @@ const packageData: PackageRow[] = [
     onlinePresence: [
       "Logo on all marketing materials",
       "Website logo placement",
+      "Inclusion in official press release",
     ],
     socialMedia: [
-      "3 branded Instagram posts",
-      "1 storytelling piece",
+      "Tagging in event social media posts",
     ],
     onsiteActivation: [
       "20'×30' activation space",
       "Media screens + step-and-repeat",
+      "Choose 3 options from the activation menu:",
+      "20' x 20' promotional space in the event area",
+      "Contest for giveaways or exclusive offers",
+      "E-blast to our database of 20k subscribers",
+      "Integration in the runway show (e.g., accessories or product gifting)",
+      "Branded items: lanyards, glasses/tableware, elevator stickers, staff T-shirts, event signage, branded cocktails (additional cost involved)",
     ],
     eventBenefits: [
       "10 VIP passes",
@@ -128,14 +131,20 @@ const packageData: PackageRow[] = [
     tagline: "Strong brand presence with activation",
     onlinePresence: [
       "Website + promotional materials logo",
+      "Inclusion in official press release",
     ],
     socialMedia: [
-      "2 branded Instagram posts",
-      "Contest & e-blast options",
+      "Tagging in event social media posts",
     ],
     onsiteActivation: [
       "20'×20' activation space",
       "Step-and-repeat inclusion",
+      "Choose 2 options from the activation menu:",
+      "20' x 20' promotional space in the event area",
+      "Contest for giveaways or exclusive offers",
+      "E-blast to our database of 20k subscribers",
+      "Integration in the runway show (e.g., accessories or product gifting)",
+      "Branded items: lanyards, glasses/tableware, elevator stickers, staff T-shirts, event signage, branded cocktails (additional cost involved)",
     ],
     eventBenefits: [
       "6 VIP passes",
@@ -153,9 +162,10 @@ const packageData: PackageRow[] = [
     tagline: "Targeted exposure with digital reach",
     onlinePresence: [
       "Website logo placement",
+      "Inclusion in official press release",
     ],
     socialMedia: [
-      "1 branded Instagram post + stories",
+      "Tagging in event social media posts",
     ],
     onsiteActivation: [
       "10'×10' activation space",
@@ -178,8 +188,7 @@ const packageData: PackageRow[] = [
       "Website logo placement",
     ],
     socialMedia: [
-      "Social media tagging",
-      "1 static Instagram post",
+      "Tagging in event social media posts",
     ],
     onsiteActivation: [
       "5'×5' promotional space",
