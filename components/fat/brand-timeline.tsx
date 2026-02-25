@@ -174,7 +174,7 @@ export function BrandTimeline() {
                     <p
                       className={cn(
                         "text-muted-foreground font-sans text-sm leading-relaxed mt-2 transition-all duration-500",
-                        isActive ? "max-h-40 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+                        isActive ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
                       )}
                     >
                       {milestone.description}
