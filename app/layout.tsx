@@ -33,7 +33,26 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-background text-foreground">
         {children}
         <Analytics />
-        <Script src="/editor-bootstrap.js" strategy="afterInteractive" />
+        <Script id="editor-bootstrap-loader" strategy="afterInteractive">
+          {`
+            (function () {
+              try {
+                var params = new URLSearchParams(window.location.search);
+                var parentOrigin = params.get('_parentOrigin');
+
+                // Only load the editor bootstrap when embedded with explicit parent origin.
+                if (!parentOrigin || window.parent === window) return;
+
+                var script = document.createElement('script');
+                script.src = '/editor-bootstrap.js';
+                script.async = true;
+                document.body.appendChild(script);
+              } catch (e) {
+                // No-op: page should continue working even if this loader fails.
+              }
+            })();
+          `}
+        </Script>
       </body>
     </html>
   )
