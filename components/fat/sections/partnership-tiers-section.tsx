@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/fat/section-heading"
 import { HorizontalRule } from "@/components/fat/horizontal-rule"
 import { PullQuote } from "@/components/fat/pull-quote"
 import { PartnershipTable } from "@/components/fat/partnership-table"
+import { SocialMediaPackagesTable } from "@/components/fat/social-media-packages-table"
 
 export function PartnershipTiersSection() {
   return (
@@ -25,6 +26,8 @@ export function PartnershipTiersSection() {
         </p>
 
         <PartnershipTable />
+
+        <SocialMediaPackagesTable />
 
         <PullQuote
           quote="Launching my collection at Fashion Art Toronto gave me validation from the Canadian fashion industry... my collection was exposed to many new people."

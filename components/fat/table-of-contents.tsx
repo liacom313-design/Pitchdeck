@@ -11,6 +11,7 @@ const sections = [
   { id: "event-overview", label: "Event Overview S/S26" },
   { id: "audience-impact", label: "Audience & Impact" },
   { id: "partnership-tiers", label: "Partnership Tiers" },
+  { id: "social-media-packages", label: "Social Media Packages" },
   { id: "activations", label: "Activation Opportunities" },
   { id: "past-partners", label: "Previous Partners" },
   { id: "contact", label: "Contact Us" },
