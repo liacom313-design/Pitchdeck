@@ -374,7 +374,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "title-sponsor",
-    tier: "$100K TITLE SPONSOR +1",
+    tier: "$100K TITLE SPONSOR",
     price: "$100K",
     priceValue: 100000,
     category: "Main Event",
@@ -433,7 +433,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "presenting-sponsor",
-    tier: "$80K PRESENTING SPONSOR +1",
+    tier: "$80K PRESENTING SPONSOR",
     price: "$80K",
     priceValue: 80000,
     category: "Main Event",
