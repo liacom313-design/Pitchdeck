@@ -812,6 +812,7 @@ export function PartnershipTable() {
     
     if (filterCategory !== "all") {
       filtered = filtered.filter(pkg => pkg.category === filterCategory)
+      return [...filtered].sort((a, b) => b.priceValue - a.priceValue)
     }
 
     if (!sortColumn) {
