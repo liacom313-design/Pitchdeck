@@ -36,7 +36,7 @@ interface PackageRow {
 const packageData: PackageRow[] = [
   {
     id: "bronze-sponsor",
-    tier: "$5K BRONZE SPONSOR",
+    tier: "BRONZE SPONSOR",
     price: "$5K",
     priceValue: 5000,
     category: "Main Event",
@@ -68,7 +68,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "silver-sponsor",
-    tier: "$10K SILVER SPONSOR",
+    tier: "SILVER SPONSOR",
     price: "$10K",
     priceValue: 10000,
     category: "Main Event",
@@ -107,7 +107,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "gold-sponsor",
-    tier: "$25K GOLD SPONSOR",
+    tier: "GOLD SPONSOR",
     price: "$25K",
     priceValue: 25000,
     category: "Main Event",
@@ -153,7 +153,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "fashion-boutique-sponsor",
-    tier: "$15,000 FASHION BOUTIQUE SPONSOR +2",
+    tier: "FASHION BOUTIQUE SPONSOR +2",
     price: "$15,000",
     priceValue: 15000,
     category: "Specialized",
@@ -189,7 +189,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "backstage-sponsor",
-    tier: "$25,000 BACKSTAGE SPONSOR",
+    tier: "BACKSTAGE SPONSOR",
     price: "$25,000",
     priceValue: 25000,
     category: "Specialized",
@@ -232,7 +232,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "entrance-sponsor",
-    tier: "$25,000 ENTRANCE SPONSOR +1",
+    tier: "ENTRANCE SPONSOR +1",
     price: "$25,000",
     priceValue: 25000,
     category: "Specialized",
@@ -275,7 +275,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "vip-lounge-sponsor",
-    tier: "$25,000 VIP LOUNGE SPONSOR",
+    tier: "VIP LOUNGE SPONSOR",
     price: "$25,000",
     priceValue: 25000,
     category: "Specialized",
@@ -318,7 +318,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "platinum-sponsor",
-    tier: "$50K PLATINUM SPONSOR",
+    tier: "PLATINUM SPONSOR",
     price: "$50K",
     priceValue: 50000,
     category: "Main Event",
@@ -374,7 +374,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "title-sponsor",
-    tier: "$100K TITLE SPONSOR",
+    tier: "TITLE SPONSOR",
     price: "$100K",
     priceValue: 100000,
     category: "Main Event",
@@ -433,7 +433,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "presenting-sponsor",
-    tier: "$80K PRESENTING SPONSOR",
+    tier: "PRESENTING SPONSOR",
     price: "$80K",
     priceValue: 80000,
     category: "Main Event",
@@ -490,7 +490,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "in-kind-5k",
-    tier: "$5K IN-KIND SPONSOR",
+    tier: "IN-KIND SPONSOR",
     price: "$5K",
     priceValue: 5000,
     category: "In Kind",
@@ -525,7 +525,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "in-kind-10k",
-    tier: "$10K IN-KIND SPONSOR",
+    tier: "IN-KIND SPONSOR",
     price: "$10K",
     priceValue: 10000,
     category: "In Kind",
@@ -559,7 +559,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "in-kind-20k-plus",
-    tier: "$20K+ IN-KIND SPONSOR",
+    tier: "IN-KIND SPONSOR",
     price: "$20K+",
     priceValue: 20000,
     category: "In Kind",
@@ -597,7 +597,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "offsite-6-5k",
-    tier: "$6.5K OFFSITE PACKAGE",
+    tier: "OFFSITE PACKAGE",
     price: "$6.5K",
     priceValue: 6500,
     category: "Offsite Sponsorship",
@@ -619,7 +619,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "offsite-10k",
-    tier: "$10K EXTENDED OFFSITE PACKAGE",
+    tier: "EXTENDED OFFSITE PACKAGE",
     price: "$10K",
     priceValue: 10000,
     category: "Offsite Sponsorship",
@@ -643,7 +643,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "offsite-25k",
-    tier: "$25K FULL SHOW PRODUCTION",
+    tier: "FULL SHOW PRODUCTION",
     price: "$25K",
     priceValue: 25000,
     category: "Offsite Sponsorship",
