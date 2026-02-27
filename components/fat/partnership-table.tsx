@@ -106,6 +106,20 @@ const packageData: PackageRow[] = [
     ],
   },
   {
+    id: "sponsor-a-designer",
+    tier: "SPONSOR A DESIGNER",
+    price: "$5K",
+    priceValue: 5000,
+    category: "Specialized",
+    icon: <Star className="size-4" />,
+    sections: [
+      {
+        heading: "ONSITE ACTIVATION",
+        items: ["Sponsor a designer or award (additional cost)."],
+      },
+    ],
+  },
+  {
     id: "gold-sponsor",
     tier: "GOLD SPONSOR",
     price: "$25K",
@@ -153,7 +167,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "fashion-boutique-sponsor",
-    tier: "FASHION BOUTIQUE SPONSOR +2",
+    tier: "FASHION BOUTIQUE SPONSOR",
     price: "$15,000",
     priceValue: 15000,
     category: "Specialized",
@@ -232,7 +246,7 @@ const packageData: PackageRow[] = [
   },
   {
     id: "entrance-sponsor",
-    tier: "ENTRANCE SPONSOR +1",
+    tier: "ENTRANCE SPONSOR",
     price: "$25,000",
     priceValue: 25000,
     category: "Specialized",
@@ -411,7 +425,7 @@ const packageData: PackageRow[] = [
         items: ["Access to all photography and video footage for promotional use."],
       },
       {
-        heading: "INTERACTIVE ACTIVATION (Choose up to three):",
+        heading: "INTERACTIVE ACTIVATION (Choose 4 Options):",
         items: [
           "40' x 40 promotional space for brand activation.",
           "Contest: Giveaway or exclusive offers.",
@@ -468,7 +482,7 @@ const packageData: PackageRow[] = [
         items: ["Access to all photography and video footage for promotional use."],
       },
       {
-        heading: "INTERACTIVE ACTIVATION (Choose up to 3):",
+        heading: "INTERACTIVE ACTIVATION (Choose 4 Options):",
         items: [
           "40' x 40' promotional space for brand activation",
           "Contest: Giveaway or exclusive offers.",
