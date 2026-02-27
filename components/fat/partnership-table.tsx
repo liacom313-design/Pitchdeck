@@ -596,64 +596,207 @@ const packageData: PackageRow[] = [
     ],
   },
   {
-    id: "offsite-6-5k",
-    tier: "OFFSITE PACKAGE",
-    price: "$6.5K",
-    priceValue: 6500,
-    category: "Offsite Sponsorship",
-    icon: <DoorOpen className="size-4" />,
-    sections: [
-      {
-        heading: "INCLUDED FEATURES",
-        items: [
-          "Location provision",
-          "Tables and chairs for the runway show",
-          "Staffing to support the runway presentation",
-        ],
-      },
-      {
-        heading: "NOTES",
-        items: ["Any other elements or customizations are additional"],
-      },
-    ],
-  },
-  {
-    id: "offsite-10k",
-    tier: "EXTENDED OFFSITE PACKAGE",
-    price: "$10K",
-    priceValue: 10000,
-    category: "Offsite Sponsorship",
-    icon: <Sparkles className="size-4" />,
-    sections: [
-      {
-        heading: "ENHANCED PRODUCTION",
-        items: [
-          "Extended decor support",
-          "Additional equipment and staging options",
-          "Additional AV effects",
-        ],
-      },
-      {
-        heading: "PROMOTION",
-        items: [
-          "Additional promotion and amplification on the FAT page",
-        ],
-      },
-    ],
-  },
-  {
-    id: "offsite-25k",
-    tier: "FULL SHOW PRODUCTION",
-    price: "$25K",
+    id: "offsite-title-patron",
+    tier: "TITLE PATRON",
+    price: "$25,000+",
     priceValue: 25000,
+    category: "Offsite Sponsorship",
+    icon: <Crown className="size-4" />,
+    sections: [
+      {
+        heading: "NAMING RIGHTS",
+        items: ['"Show presented by [Brand]"'],
+      },
+      {
+        heading: "BRANDING",
+        items: [
+          "Dominant logo placement on event screens, entry signage, step-and-repeat, event program, and FAT website",
+        ],
+      },
+      {
+        heading: "PRESS & MEDIA",
+        items: [
+          "Featured mention in official FAT press releases",
+          "Dedicated quote opportunity from Brand Rep",
+          "Inclusion in media kit",
+          "Backlinks on FAT website",
+        ],
+      },
+      {
+        heading: "SOCIAL MEDIA",
+        items: [
+          "2 branded collab reels (1 pre-show, 1 post-show)",
+          "Caption mentions across all official show content (additional options available)",
+        ],
+      },
+      {
+        heading: "CONTENT RIGHTS",
+        items: [
+          "Full access to branded event photography and highlight video captures from FAT media team for marketing",
+        ],
+      },
+      {
+        heading: "ACTIVATION",
+        items: [
+          "Premium activation space (e.g., branded lounge, cocktail bar, VIP reception area, installation)",
+          "Branded item integrations (cocktails, t-shirts, gifting, etc.)",
+        ],
+      },
+      {
+        heading: "TICKETS",
+        items: [
+          "12 VIP front-row seats",
+          "10 GA passes",
+          "Backstage tour for sponsor reps",
+        ],
+      },
+    ],
+  },
+  {
+    id: "offsite-major-patron",
+    tier: "MAJOR PATRON",
+    price: "$15,000",
+    priceValue: 15000,
+    category: "Offsite Sponsorship",
+    icon: <Star className="size-4" />,
+    sections: [
+      {
+        heading: "BRANDING",
+        items: [
+          "Prominent logo on event screen, step-and-repeat, event program, and FAT website sponsor roll (with backlinks)",
+        ],
+      },
+      {
+        heading: "PRESS & MEDIA",
+        items: [
+          "Mention in FAT press release sponsor roll",
+          "Inclusion in media kit",
+        ],
+      },
+      {
+        heading: "SOCIAL MEDIA",
+        items: [
+          "1 branded collab reel during event",
+          "1 static post",
+          "Sponsor tags in relevant captions",
+        ],
+      },
+      {
+        heading: "CONTENT RIGHTS",
+        items: [
+          "8-10 curated branded photos (activation, signage, logo in context)",
+          "Access to select edited event footage",
+        ],
+      },
+      {
+        heading: "ACTIVATION",
+        items: [
+          "Activation space option (e.g., branded bar, sampling station, or lounge)",
+        ],
+      },
+      {
+        heading: "TICKETS",
+        items: [
+          "6 VIP seats",
+          "8 GA passes",
+          "Reserved seating at sponsored show",
+        ],
+      },
+    ],
+  },
+  {
+    id: "offsite-partner-patron",
+    tier: "PARTNER PATRON",
+    price: "$10,000",
+    priceValue: 10000,
     category: "Offsite Sponsorship",
     icon: <Award className="size-4" />,
     sections: [
       {
-        heading: "WHITE GLOVE SERVICE",
+        heading: "BRANDING",
         items: [
-          "Full show production top to bottom",
-          "White-glove service to produce the exact event you want (within reason)",
+          "Logo placement on event screens, event program, and FAT website sponsor roll",
+        ],
+      },
+      {
+        heading: "PRESS & MEDIA",
+        items: [
+          "Mention in sponsor roll within FAT press release",
+        ],
+      },
+      {
+        heading: "SOCIAL MEDIA",
+        items: [
+          "1 static post (sponsor tag)",
+          "Inclusion in caption mentions across official show posts",
+        ],
+      },
+      {
+        heading: "CONTENT RIGHTS",
+        items: [
+          "5-6 curated branded photos (logo, signage, or activation presence)",
+        ],
+      },
+      {
+        heading: "ACTIVATION",
+        items: [
+          "Option for small on-site product placement or gifting integration",
+        ],
+      },
+      {
+        heading: "TICKETS",
+        items: [
+          "4 VIP seats",
+          "4 GA passes",
+        ],
+      },
+    ],
+  },
+  {
+    id: "offsite-community-patron",
+    tier: "COMMUNITY PATRON",
+    price: "$5,000",
+    priceValue: 5000,
+    category: "Offsite Sponsorship",
+    icon: <DoorOpen className="size-4" />,
+    sections: [
+      {
+        heading: "BRANDING",
+        items: [
+          "Logo recognition on FAT website sponsor roll and digital program",
+        ],
+      },
+      {
+        heading: "PRESS & MEDIA",
+        items: [
+          "Inclusion in sponsor roll section of FAT press release",
+        ],
+      },
+      {
+        heading: "SOCIAL MEDIA",
+        items: [
+          "1 IG Story tag during event",
+          "Inclusion in sponsor roll captions across official event posts",
+        ],
+      },
+      {
+        heading: "CONTENT RIGHTS",
+        items: [
+          "2-3 branded photo assets (if signage, product, or activation is present)",
+        ],
+      },
+      {
+        heading: "ACTIVATION",
+        items: [
+          "Option for product giveaway, bar/merch branding, or online activation (contest/e-blast)",
+        ],
+      },
+      {
+        heading: "TICKETS",
+        items: [
+          "2 VIP seats",
+          "2 GA passes",
+          "Reserved seating where possible",
         ],
       },
     ],
