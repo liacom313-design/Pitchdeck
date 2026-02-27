@@ -662,25 +662,7 @@ const packageData: PackageRow[] = [
 
 type SortColumn = "tier" | "price" | "category"
 type SortDirection = "asc" | "desc"
-
-const defaultAllPackagesOrder: Record<string, number> = {
-  "title-sponsor": 0,
-  "presenting-sponsor": 1,
-  "platinum-sponsor": 2,
-  "gold-sponsor": 3,
-  "silver-sponsor": 4,
-  "bronze-sponsor": 5,
-  "offsite-6-5k": 6,
-  "offsite-10k": 7,
-  "offsite-25k": 8,
-  "fashion-boutique-sponsor": 9,
-  "backstage-sponsor": 10,
-  "entrance-sponsor": 11,
-  "vip-lounge-sponsor": 12,
-  "in-kind-5k": 13,
-  "in-kind-10k": 14,
-  "in-kind-20k-plus": 15,
-}
+type FilterCategory = "Main Event" | "Offsite Sponsorship" | "Specialized" | "In Kind"
 
 function SortIcon({ column, sortColumn, sortDirection }: { column: SortColumn; sortColumn: SortColumn | null; sortDirection: SortDirection }) {
   if (sortColumn !== column) {
@@ -784,7 +766,7 @@ export function PartnershipTable() {
   const [sortColumn, setSortColumn] = useState<SortColumn | null>(null)
   const [sortDirection, setSortDirection] = useState<SortDirection>("desc")
   const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set())
-  const [filterCategory, setFilterCategory] = useState<"all" | "Main Event" | "Offsite Sponsorship" | "Specialized" | "In Kind">("all")
+  const [filterCategory, setFilterCategory] = useState<FilterCategory>("Main Event")
 
   const handleSort = (column: SortColumn) => {
     if (sortColumn === column) {
@@ -808,20 +790,10 @@ export function PartnershipTable() {
   }
 
   const sortedAndFilteredData = useMemo(() => {
-    let filtered = packageData
-    
-    if (filterCategory !== "all") {
-      filtered = filtered.filter(pkg => pkg.category === filterCategory)
-      return [...filtered].sort((a, b) => b.priceValue - a.priceValue)
-    }
+    const filtered = packageData.filter(pkg => pkg.category === filterCategory)
 
     if (!sortColumn) {
-      if (filterCategory === "all") {
-        return [...filtered].sort(
-          (a, b) => defaultAllPackagesOrder[a.id] - defaultAllPackagesOrder[b.id]
-        )
-      }
-      return filtered
+      return [...filtered].sort((a, b) => b.priceValue - a.priceValue)
     }
 
     return [...filtered].sort((a, b) => {
@@ -847,10 +819,10 @@ export function PartnershipTable() {
     <div className="reveal flex flex-col gap-6">
       {/* Filter tabs */}
       <div className="flex gap-0 border border-border w-fit">
-        {["all", "Main Event", "Offsite Sponsorship", "Specialized", "In Kind"].map((cat) => (
+        {(["Main Event", "Offsite Sponsorship", "Specialized", "In Kind"] as FilterCategory[]).map((cat) => (
           <button
             key={cat}
-            onClick={() => setFilterCategory(cat as typeof filterCategory)}
+            onClick={() => setFilterCategory(cat)}
             className={cn(
               "font-sans text-xs md:text-sm tracking-[0.15em] uppercase px-4 md:px-5 py-2 md:py-3 transition-colors duration-300",
               filterCategory === cat
@@ -858,7 +830,7 @@ export function PartnershipTable() {
                 : "bg-transparent text-muted-foreground hover:text-foreground"
             )}
           >
-            {cat === "all" ? "All Packages" : cat}
+            {cat}
           </button>
         ))}
       </div>
